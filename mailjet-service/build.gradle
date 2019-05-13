@@ -2,5 +2,7 @@ dependencies {
 	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
 	compileOnly group: "org.osgi", name: "osgi.cmpn"
 	compileOnly project(":modules:liferay-mailjet:mailjet-api")
-	compileInclude group: "com.mailjet", name: "mailjet-client", version: "4.2.0"
+	compileInclude group: "com.mailjet", name: "mailjet-client", version: "4.2.1"
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype", version: "2.0.13"
 }
