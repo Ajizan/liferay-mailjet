@@ -1,0 +1,4 @@
+Bundle-Name: mailjet-api
+Bundle-SymbolicName: com.ajizan.liferay.mailjet
+Bundle-Version: 1.0.0
+Export-Package: com.ajizan.liferay.mailjet.api

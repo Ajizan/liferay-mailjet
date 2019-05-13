@@ -1,0 +1,6 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "org.osgi", name: "osgi.cmpn"
+	compileOnly project(":modules:liferay-mailjet:mailjet-api")
+	compileInclude group: "com.mailjet", name: "mailjet-client", version: "4.2.0"
+}
