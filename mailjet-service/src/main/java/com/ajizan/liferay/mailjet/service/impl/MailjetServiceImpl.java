@@ -19,6 +19,7 @@ import com.mailjet.client.resource.Template;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.json.JSONArray;
@@ -54,7 +55,18 @@ public class MailjetServiceImpl implements MailjetService {
 
 		if (_log.isDebugEnabled()) {
 			_log.debug("using mailjetTemplateId=" + mailjetTemplateId);
+			Iterator<String> iterator = variables.keySet().iterator();
+			_log.debug("toEmail=" + toEmail);
+			_log.debug("toName=" + toName);
+			_log.debug("fromEmailAddress=" + toName);
+			_log.debug("fromName=" + toName);
+			while (iterator.hasNext()) {
+				String variable = iterator.next();
+				String value = variables.get(variable);
+				_log.debug(variable + "=" + value);
+			}
 		}
+
 
 		MailjetClient client;
 		MailjetRequest request;
