@@ -120,7 +120,7 @@ public class MailjetServiceImpl implements MailjetService {
 			MailjetResponse response;
 			client = new MailjetClient(mailjetApiPublicKey, mailjetApiSecretKey);
 			try {
-				request = new MailjetRequest(Template.resource, "user|" + templateId);
+				request = new MailjetRequest(Template.resource, "apikey|" + templateId);
 				_log.debug(request.buildUrl() + request.queryString());
 				response = client.get(request);
 			} catch (MailjetException | MailjetSocketTimeoutException | UnsupportedEncodingException
